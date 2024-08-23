@@ -11,16 +11,22 @@
   <link rel="stylesheet" href="./static/home.css">
 </head>
 <body>
+  {%  include 'nav.html' %}
+  <img class='img-fluid'  id='banner' src="./static/banner.jpg">
   <div class='container'>
     
   
   <h1 class="text-center mt-4 mb-4">{{Company_name}} Careers</h1>
-  <img class='img-fluid'  id='banner' src="./static/banner.jpg">
-  <h2 class="text-center mt-4 mb-4"> About CR7</h2>
-  <p class='lead'>
+  
+  <!-- <h2 class="text-center mt-4 mb-4"> About CR7</h2> -->
+    <div class='row'>
+      
+  <p class='lead col-6'>
     Cristiano Ronaldo dos Santos Aveiro GOIH ComM  born 5 February 1985) is a Portuguese professional footballer who plays as a forward for and captains both Saudi Pro League club Al Nassr and the Portugal national team. Widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d'Or awards,[note 3] a record three UEFA Men's Player of the Year Awards, and four European Golden Shoes, the most by a European player. He has won 33 trophies in his career, including seven league titles, five UEFA Champions Leagues, the UEFA European Championship and the UEFA Nations League. Ronaldo holds the records for most appearances (183), goals (140) and assists (42) in the Champions League, most appearances (30), assists (8), goals in the European Championship (14), international goals (130) and international appearances (212). He is one of the few players to have made over 1,200 professional career appearances, the most by an outfield player, and has scored over 890 official senior career goals for club and country, making him the top goalscorer of all time.
   </p>
-  <h2 class="text-center mt-4 mb-4">Job Opening</h2>
+      <img class='d-none d-md-block col-md-6' src='./static/Ronaldo.jpg' class='img-fluid' height='512px%' width='100%' style='border-radius:10px;object-fit:cover;'>
+    </div>
+  <h2 class="text-center mt-4 mb-4">Open Position</h2>
     <p>
       {% for Job in jobs%}
         {% include 'joblist.html' %}
@@ -30,9 +36,10 @@
   
   <div class='text-center'>
       <button class='btn btn-primary btn-lg'>Contact Us</button>
-      <p class='mt-4'>@Copyrights to Gopinath</p>
+      <!-- <p class='mt-4'>@Copyrights to Gopinath</p> -->
     </div> 
     
   </div>
+  {%  include 'footer.html' %}
 </body>
 </html>
